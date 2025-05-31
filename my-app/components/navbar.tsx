@@ -1,12 +1,167 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Phone, Menu, X, ChevronDown, ChevronUp } from "lucide-react"
 
 // Assets
 import logo from "@/assets/logo.webp"
 import {Bebas_Neue} from "next/font/google"
 
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] })
+
+function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+    if (!isOpen) {
+      setServicesOpen(false) // Reset services dropdown when opening menu
+    }
+  }
+
+  const toggleServices = () => {
+    setServicesOpen(!servicesOpen)
+  }
+
+  return (
+    <>
+      {/* Mobile Menu Button */}
+      <button
+        onClick={toggleMenu}
+        className="md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
+        aria-label="Toggle mobile menu"
+      >
+        <Menu className="h-6 w-6 text-gray-700" />
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Backdrop */}
+          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={toggleMenu} />
+
+          {/* Menu Panel */}
+          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 border-b">
+                <Image src={logo} alt="Rapid Removal DFW Logo" width={40} height={40} className="h-10 w-auto" />
+                <button
+                  onClick={toggleMenu}
+                  className="p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  aria-label="Close mobile menu"
+                >
+                  <X className="h-6 w-6 text-gray-700" />
+                </button>
+              </div>
+
+              {/* Navigation */}
+              <div className="flex-1 overflow-y-auto py-4">
+                <nav className="px-4 space-y-2">
+                  {/* Services Dropdown */}
+                  <div>
+                    <button
+                      onClick={toggleServices}
+                      className="flex items-center justify-between w-full py-3 text-left text-lg font-medium text-gray-900 hover:text-green-500 focus:outline-none"
+                    >
+                      Services
+                      {servicesOpen ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                    </button>
+
+                    {servicesOpen && (
+                      <div className="ml-4 mt-2 space-y-3">
+                        <Link
+                          href="#residential"
+                          className="block py-2 text-gray-700 hover:text-green-500"
+                          onClick={toggleMenu}
+                        >
+                          Residential Junk Removal
+                        </Link>
+                        <Link
+                          href="#commercial"
+                          className="block py-2 text-gray-700 hover:text-green-500"
+                          onClick={toggleMenu}
+                        >
+                          Commercial Junk Removal
+                        </Link>
+                        <Link
+                          href="#dumpster-rentals"
+                          className="block py-2 text-gray-700 hover:text-green-500"
+                          onClick={toggleMenu}
+                        >
+                          Dumpster Rentals
+                        </Link>
+                        <Link
+                          href="#light-demolitions"
+                          className="block py-2 text-gray-700 hover:text-green-500"
+                          onClick={toggleMenu}
+                        >
+                          Light Demolitions
+                        </Link>
+                        <Link
+                          href="#exterior-cleaning"
+                          className="block py-2 text-gray-700 hover:text-green-500"
+                          onClick={toggleMenu}
+                        >
+                          Exterior Cleaning
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Other Navigation Items */}
+                  <Link
+                    href="#about"
+                    className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
+                    onClick={toggleMenu}
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    href="#contact"
+                    className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
+                    onClick={toggleMenu}
+                  >
+                    Contact Us
+                  </Link>
+                  <Link
+                    href="#blog"
+                    className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
+                    onClick={toggleMenu}
+                  >
+                    Blog
+                  </Link>
+                </nav>
+              </div>
+
+              {/* Call-to-Action Buttons */}
+              <div className="p-4 space-y-3 border-t">
+                <Button
+                  className="bg-green-500 hover:bg-green-300 w-full py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700"
+                  onClick={toggleMenu}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  CALL (214) 225-9545
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full rounded-sm border-2 border-black text-black hover:bg-black hover:text-white font-bold py-5 text-lg"
+                  onClick={toggleMenu}
+                >
+                  GET A FREE ESTIMATE
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  )
+};
 
 export default function Navbar() {
   return (
@@ -26,7 +181,9 @@ export default function Navbar() {
             </div>
             <span className="sr-only">Rapid Removal DFW</span>
             </Link>
-          <nav className="hidden md:flex items-center space-x-5">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-6">
             <div className="relative group">
               <Link
                 href="#services"
@@ -173,15 +330,18 @@ export default function Navbar() {
             <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
               Contact Us
             </Link>
-            <Link href="#review" className="text-sm font-medium text-gray-700 hover:text-green-500">
-              Testimonials
+            <Link href="#blog" className="text-sm font-medium text-gray-700 hover:text-green-500">
+              Blog
             </Link>
           </nav>
-          <Button
-            className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700"
-          >
+
+          <div className="flex items-center space-x-4">
+            <Button
+            className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700">
             <p className={bebas.className + " text-[18px]"}>Call (214)-233-5545</p>
-          </Button>
+            </Button>
+            <MobileMenu />
+          </div>
         </div>
       </header>
   )
