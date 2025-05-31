@@ -1,0 +1,188 @@
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+
+// Assets
+import logo from "@/assets/logo.webp"
+import {Bebas_Neue} from "next/font/google"
+
+const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] })
+
+export default function Navbar() {
+  return (
+      <header className="sticky top-0 bg-white py-3 px-4 border-b z-50">
+        <div className="container mx-auto flex items-center justify-between">
+            <Link href="/" className="flex items-center overflow-visible" style={{ zIndex: 1 }}>
+            <div className="relative" style={{ height: "40px", overflow: "visible" }}>
+              <Image
+              src={logo.src}
+              alt="Rapid Removal DFW Logo"
+              width={80}
+              height={80}
+              className="h-20 w-auto -mt-3"
+              style={{ maxHeight: "64px" }}//can control the height of the logo and it will cause the logo to stick out
+              priority
+              />
+            </div>
+            <span className="sr-only">Rapid Removal DFW</span>
+            </Link>
+          <nav className="hidden md:flex items-center space-x-5">
+            <div className="relative group">
+              <Link
+                href="#services"
+                className="text-sm font-medium text-gray-700 hover:text-green-500 flex items-center"
+              >
+                Services
+                <svg
+                  className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
+              {/* Services Dropdown */}
+              <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Our Services</h3>
+                  <div className="grid grid-cols-1 gap-3">
+                    <Link
+                      href="#residential"
+                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                          />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">Residential</p>
+                        <p className="text-xs text-gray-500">Home junk removal services</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="#commercial"
+                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                          />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">Commercial</p>
+                        <p className="text-xs text-gray-500">Business & office cleanouts</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="#dumpster-rentals"
+                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 9h.01M15 9h.01M9 15h.01M15 15h.01"
+                          />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
+                          Dumpster Rentals
+                        </p>
+                        <p className="text-xs text-gray-500">Various sizes available</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="#light-demolitions"
+                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
+                          Light Demolitions
+                        </p>
+                        <p className="text-xs text-gray-500">Safe & efficient demolition</p>
+                      </div>
+                    </Link>
+
+                    <Link
+                      href="#exterior-cleaning"
+                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
+                    >
+                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
+                          Exterior Cleaning
+                        </p>
+                        <p className="text-xs text-gray-500">Power washing & debris removal</p>
+                      </div>
+                    </Link>
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-gray-100">
+                    <Link
+                      href="#contact"
+                      className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                    >
+                      Get Free Quote
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-green-500">
+              About Us
+            </Link>
+            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
+              Contact Us
+            </Link>
+            <Link href="#review" className="text-sm font-medium text-gray-700 hover:text-green-500">
+              Testimonials
+            </Link>
+          </nav>
+          <Button
+            className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700"
+          >
+            <p className={bebas.className + " text-[18px]"}>Call (214)-233-5545</p>
+          </Button>
+        </div>
+      </header>
+  )
+};
