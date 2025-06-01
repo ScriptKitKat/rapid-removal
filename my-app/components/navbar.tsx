@@ -115,14 +115,14 @@ function MobileMenu() {
 
                   {/* Other Navigation Items */}
                   <Link
-                    href="#about"
+                    href="/about"
                     className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
                     onClick={toggleMenu}
                   >
                     About Us
                   </Link>
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
                     onClick={toggleMenu}
                   >
@@ -324,10 +324,10 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link href="#about" className="text-sm font-medium text-gray-700 hover:text-green-500">
+            <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-green-500">
               About Us
             </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
+            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
               Contact Us
             </Link>
             <Link href="#blog" className="text-sm font-medium text-gray-700 hover:text-green-500">

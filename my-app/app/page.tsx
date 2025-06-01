@@ -8,7 +8,6 @@ import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
 // Assets
-import logo from "@/assets/logo.webp"
 import banner from "@/assets/banner.webp"
 import team from "@/assets/team.webp"
 import locations from "@/assets/locations.jpg"
@@ -302,7 +301,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-green-50" id="about">
+        <section className="py-16 bg-green-50">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Image for desktop (left side) */}
