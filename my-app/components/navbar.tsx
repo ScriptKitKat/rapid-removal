@@ -186,7 +186,7 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center space-x-6">
             <div className="relative group">
               <Link
-                href="#services"
+                href="/about#services"
                 className="text-sm font-medium text-gray-700 hover:text-green-500 flex items-center"
               >
                 Services

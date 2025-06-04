@@ -373,12 +373,14 @@ export default function Home() {
           <p className="mb-6 text-xl text-gray-600">
             Rapid Removal DFW provides reliable junk removal, dumpster rental, and cleanup services across DFW — including Dallas, Frisco, Plano, Allen, McKinney, and more.
           </p>
+          <Link href={"/service-areas"}>
           <Button
             variant="outline"
             className="border-green-500 text-green-500 hover:bg-green-500 hover:text-white rounded-sm text-lg px-6 py-6 flex items-center justify-center"
           >
             <span className={bebas.className + " text-[30px]"}>VIEW ALL LOCATIONS</span>
           </Button>
+          </Link>
               </div>
               <Image src={locations.src} alt="image of cleanupsite" width={500} height={500} className="rounded-lg" />
             </div>
