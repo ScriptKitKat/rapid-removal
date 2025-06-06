@@ -75,35 +75,35 @@ function MobileMenu() {
                     {servicesOpen && (
                       <div className="ml-4 mt-2 space-y-3">
                         <Link
-                          href="#residential"
+                          href="/residential"
                           className="block py-2 text-gray-700 hover:text-green-500"
                           onClick={toggleMenu}
                         >
                           Residential Junk Removal
                         </Link>
                         <Link
-                          href="#commercial"
+                          href="/commercial"
                           className="block py-2 text-gray-700 hover:text-green-500"
                           onClick={toggleMenu}
                         >
                           Commercial Junk Removal
                         </Link>
                         <Link
-                          href="#dumpster-rentals"
+                          href="/dumpster-rentals"
                           className="block py-2 text-gray-700 hover:text-green-500"
                           onClick={toggleMenu}
                         >
                           Dumpster Rentals
                         </Link>
                         <Link
-                          href="#light-demolitions"
+                          href="/light-demolitions"
                           className="block py-2 text-gray-700 hover:text-green-500"
                           onClick={toggleMenu}
                         >
                           Light Demolitions
                         </Link>
                         <Link
-                          href="#exterior-cleaning"
+                          href="/exterior-cleaning"
                           className="block py-2 text-gray-700 hover:text-green-500"
                           onClick={toggleMenu}
                         >
@@ -204,9 +204,9 @@ export default function Navbar() {
               <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-80 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Our Services</h3>
-                  <div className="grid grid-cols-1 gap-3">
+                  <div className="grid grid-cols-1 gap-1">
                     <Link
-                      href="#residential"
+                      href="/residential"
                       className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
                     >
                       <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
@@ -221,12 +221,12 @@ export default function Navbar() {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">Residential</p>
-                        <p className="text-xs text-gray-500">Home junk removal services</p>
+                        <p className="text-xs text-gray-500">Home junk removal & cleanouts</p>
                       </div>
                     </Link>
 
                     <Link
-                      href="#commercial"
+                      href="/commercial"
                       className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
                     >
                       <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
@@ -241,12 +241,12 @@ export default function Navbar() {
                       </div>
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">Commercial</p>
-                        <p className="text-xs text-gray-500">Business & office cleanouts</p>
+                        <p className="text-xs text-gray-500">Business junk removal & cleanouts</p>
                       </div>
                     </Link>
 
                     <Link
-                      href="#dumpster-rentals"
+                      href="/dumpster-rentals"
                       className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
                     >
                       <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
@@ -255,7 +255,7 @@ export default function Navbar() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 9h.01M15 9h.01M9 15h.01M15 15h.01"
+                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M9 7V4a1 1 0 011-1h4a1 1 0 011 1v3m-7 0h10"
                           />
                         </svg>
                       </div>
@@ -263,12 +263,11 @@ export default function Navbar() {
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
                           Dumpster Rentals
                         </p>
-                        <p className="text-xs text-gray-500">Various sizes available</p>
                       </div>
                     </Link>
 
                     <Link
-                      href="#light-demolitions"
+                      href="/light-demolitions"
                       className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
                     >
                       <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
@@ -277,7 +276,7 @@ export default function Navbar() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}
-                            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                            d="M4 20l7-7-3-3 7-7M14 10l6 6M10 14l-6 6"
                           />
                         </svg>
                       </div>
@@ -285,21 +284,20 @@ export default function Navbar() {
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
                           Light Demolitions
                         </p>
-                        <p className="text-xs text-gray-500">Safe & efficient demolition</p>
                       </div>
                     </Link>
 
                     <Link
-                      href="#exterior-cleaning"
+                      href="/exterior-cleaning"
                       className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
                     >
                       <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
                         <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3zm6 13l.75 2.25L21 18l-2.25.75L18 21l-.75-2.25L15 18l2.25-.75L18 16zm-12 0l.75 2.25L9 18l-2.25.75L6 21l-.75-2.25L3 18l2.25-.75L6 16z"
                           />
                         </svg>
                       </div>
@@ -307,17 +305,16 @@ export default function Navbar() {
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
                           Exterior Cleaning
                         </p>
-                        <p className="text-xs text-gray-500">Power washing & debris removal</p>
                       </div>
                     </Link>
                   </div>
 
-                  <div className="mt-4 pt-4 border-t border-gray-100">
+                  <div className="mt-2 pt-4 border-t border-gray-100">
                     <Link
-                      href="#contact"
-                      className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                      href="/contact"
+                      className="block w-full text-center bg-green-500 hover:bg-green-300 text-white hover:text-black rounded-sm border-2 hover:border-green-700 font-medium py-2 px-4 transition-colors"
                     >
-                      Get Free Quote
+                      <p className={bebas.className + " text-[20px]"}>Get Free Quote</p>
                     </Link>
                   </div>
                 </div>
