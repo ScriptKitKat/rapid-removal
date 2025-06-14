@@ -47,9 +47,12 @@ export default function CommercialJunkServicesPage() {
                   Whether it's an office building or retail space, Rapid Removal DFW handles commercial cleanouts,
                   equipment removal, and construction debris. Professional service you can count on!
                 </p>
-                <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-6 border-2 border-green-700 text-md rounded-sm">
-                  <p className={bebas.className + " text-[30px]"}>GET A FREE ESTIMATE</p>
-                </Button>
+                <Link href="/contact#quote" className="inline-block mb-6">
+                  <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-6 border-2 border-green-700 text-md rounded-sm">
+                    <p className={bebas.className + " text-[30px]"}>GET A FREE ESTIMATE</p>
+                  </Button>
+                </Link>
+                
               </div>
               <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
                 <Image

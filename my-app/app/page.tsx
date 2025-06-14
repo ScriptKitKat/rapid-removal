@@ -281,7 +281,7 @@ export default function Home() {
               </Link>
 
               <Link
-                href="/demolition"
+                href="/light-demolitions"
                 className="border rounded-lg overflow-hidden block focus:outline-none focus:ring-2 focus:ring-green-500 transition-shadow hover:shadow-lg cursor-pointer"
                 tabIndex={0}
               >
