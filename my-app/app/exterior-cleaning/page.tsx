@@ -23,14 +23,16 @@ export default function ExteriorCleaningPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl font-bold mb-4">Exterior Cleaning Services</h1>
+                <h1 className={oswald.className + " text-4xl font-bold mb-4"}>Exterior Cleaning Services</h1>
                 <p className="text-gray-700 mb-6 text-lg">
                   Professional power washing and exterior cleaning services for homebuilders, contractors, and property
                   owners. We make your property look brand new again.
                 </p>
-                <Button className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-md" asChild>
-                  <Link href="/contact">GET A FREE ESTIMATE</Link>
-                </Button>
+                <Link href="/contact#quote" className="inline-block mb-6">
+                  <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-6 border-2 border-green-700 text-md rounded-sm">
+                    <p className={bebas.className + " text-[30px]"}>GET A FREE ESTIMATE</p>
+                  </Button>
+                </Link>
               </div>
               <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
                 <Image
