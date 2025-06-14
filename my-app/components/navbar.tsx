@@ -129,11 +129,11 @@ function MobileMenu() {
                     Contact Us
                   </Link>
                   <Link
-                    href="#blog"
+                    href="/testimonial"
                     className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
                     onClick={toggleMenu}
                   >
-                    Blog
+                    Testimonials
                   </Link>
                 </nav>
               </div>
@@ -327,8 +327,8 @@ export default function Navbar() {
             <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
               Contact Us
             </Link>
-            <Link href="#blog" className="text-sm font-medium text-gray-700 hover:text-green-500">
-              Blog
+            <Link href="/testimonial" className="text-sm font-medium text-gray-700 hover:text-green-500">
+              Testimonials
             </Link>
           </nav>
 

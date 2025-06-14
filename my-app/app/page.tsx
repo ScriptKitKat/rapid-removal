@@ -224,9 +224,11 @@ export default function Home() {
               commercial needs, ensuring a clean space without breaking the bank.
               </p>
               <div className="w-full flex">
-              <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-8 border-2 border-green-700 text-lg rounded-sm">
-                <p className={bebas.className + " text-[40px]"}>GET A FREE ESTIMATE</p>
-              </Button>
+              <Link href="/contact#quote" className="w-full">
+                <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-8 border-2 border-green-700 text-lg rounded-sm">
+                  <p className={bebas.className + " text-[40px]"}>GET A FREE ESTIMATE</p>
+                </Button>
+              </Link>
               </div>
             </div>
           </div>
@@ -344,9 +346,11 @@ export default function Home() {
                   <hr className="my-4 border-black" />
                 </div>
 
-                <Button className={bebas.className + " mt-8 bg-green-600 hover:bg-green-300 text-white hover:text-black text-[30px] px-6 py-8 rounded-sm border-2 border-green-500 hover:border-green-700"}>
-                  GET AN INSTANT QUOTE
-                </Button>
+                <Link href="/contact#quote" className="w-full">
+                  <Button className={bebas.className + " mt-8 bg-green-600 hover:bg-green-300 text-white hover:text-black text-[30px] px-6 py-8 rounded-sm border-2 border-green-500 hover:border-green-700"}>
+                    GET AN INSTANT QUOTE
+                  </Button>
+                </Link>                
               </div>
             </div>
           </div>
@@ -400,12 +404,15 @@ export default function Home() {
                   <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
                     <p className={bebas.className + " text-[30px]"}>CALL (214) 225-9545</p>
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="border-green-500 border-2 text-green-500 px-5 py-6 hover:bg-green-500 hover:text-white"
-                  >
-                    <p className={bebas.className + " text-[30px]"}>BOOK ONLINE</p>
-                  </Button>
+                  <Link href="/contact#quote" className="w-full">
+                    <Button
+                      variant="outline"
+                      className="border-green-500 border-2 text-green-500 px-5 py-6 hover:bg-green-500 hover:text-white"
+                    >
+                      <p className={bebas.className + " text-[30px]"}>BOOK ONLINE</p>
+                    </Button>
+                  </Link>
+                  
                 </div>
               </div>
               <Image src={ctaimg.src} alt="junk removal truck" width={500} height={500} className="rounded-lg" />
