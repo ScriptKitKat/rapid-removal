@@ -9,6 +9,7 @@ import Navbar from "@/components/navbar"
 
 import { Oswald, Bebas_Neue } from "next/font/google"
 import ctaimg from "@/assets/ctaimg.jpg"
+import residentialsplash from "@/assets/residentialsplash.jpg"
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "700"], display: "swap" })
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400", display: "swap" })
@@ -51,7 +52,7 @@ export default function ResidentialJunkServicesPage() {
               </div>
               <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={residentialsplash.src}
                   alt="Residential Junk Removal"
                   width={600}
                   height={400}
@@ -89,18 +90,18 @@ export default function ResidentialJunkServicesPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <ul className="space-y-3">
-                      <li className="text-gray-700">Garage cleanouts</li>
-                      <li className="text-gray-700">Dumpster cleanouts</li>
+                      <li className="text-gray-700">Home cleanouts</li>
+                      <li className="text-gray-700">Yard cleanouts</li>
                       <li className="text-gray-700">Basement cleanout services</li>
-                      <li className="text-gray-700">Rental junk removal & recycling</li>
+                      <li className="text-gray-700">Garage cleanouts</li>
                       <li className="text-gray-700">Bulk Pickup</li>
                     </ul>
                   </div>
                   <div>
                     <ul className="space-y-3">
                       <li className="text-gray-700">Attic space cleanouts</li>
-                      <li className="text-gray-700">Estate cleanout</li>
                       <li className="text-gray-700">Hoarder removal</li>
+                      <li className="text-gray-700">Remodel debris removal</li>
                       <li className="text-gray-700">Moving cleanouts</li>
                       <li className="text-gray-700">Furniture Removal</li>
                     </ul>
