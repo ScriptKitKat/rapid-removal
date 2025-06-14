@@ -10,6 +10,8 @@ import Navbar from "@/components/navbar"
 import { Oswald, Bebas_Neue } from "next/font/google"
 import ctaimg from "@/assets/ctaimg.jpg"
 import residentialsplash from "@/assets/residentialsplash.jpg"
+import garage from "@/assets/garageresidential.jpg"
+
 
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "700"], display: "swap" })
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400", display: "swap" })
@@ -143,18 +145,20 @@ export default function ResidentialJunkServicesPage() {
                     <h4 className="font-medium text-gray-900 mb-2">Pickup</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li>Mattresses</li>
-                      <li>Storage sheds</li>
+                      <li>Cardboard</li>
                       <li>Trash pickup</li>
                       <li>TV disposal</li>
+                      <li>Cabinets</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">Pickup</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>Mattresses</li>
+                      <li>Remodel debris</li>
+                      <li>Yard debris</li>
                       <li>Storage sheds</li>
-                      <li>Trash pickup</li>
-                      <li>TV disposal</li>
+                      <li>Electronics</li>
+                      <li>Carpet</li>
                     </ul>
                   </div>
                 </div>
@@ -165,7 +169,7 @@ export default function ResidentialJunkServicesPage() {
               </div>
               <div>
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={garage.src}
                   alt="Workers carrying junk items"
                   width={600}
                   height={500}
