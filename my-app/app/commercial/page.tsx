@@ -11,6 +11,16 @@ import Navbar from "@/components/navbar"
 import {Oswald, Bebas_Neue} from "next/font/google"
 import ctaimg from "@/assets/ctaimg.jpg"
 
+import commercialsplash from "@/assets/commercialsplash.jpg"
+import commercialimg from "@/assets/commercialimg.jpg"
+import commercialimg2 from "@/assets/commercialimg2.jpg"
+import commercialreview from "@/assets/commercialreview.jpg"
+
+import commercialbefore1 from "@/assets/commercialbefore1.jpg"
+import commercialbefore2 from "@/assets/commercialbefore2.jpg"
+import commercialafter1 from "@/assets/commercialafter1.jpg"
+import commercialafter2 from "@/assets/commercialafter2.jpg"
+
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "700"]})
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] })
 
@@ -18,9 +28,8 @@ export default function CommercialJunkServicesPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const beforeAfterImages = [
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
+    { before: commercialbefore1, after: commercialafter1 },
+    { before: commercialbefore2, after: commercialafter2},
   ]
 
   const nextSlide = () => {
@@ -56,7 +65,7 @@ export default function CommercialJunkServicesPage() {
               </div>
               <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={commercialsplash.src}
                   alt="Commercial Junk Removal"
                   width={600}
                   height={400}
@@ -80,33 +89,34 @@ export default function CommercialJunkServicesPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1">
-                <Image
-                  src="/placeholder.svg?height=500&width=600"
+                <div className="order-2 md:order-1">
+                <div className="relative w-full aspect-[1/1] rounded-lg overflow-hidden">
+                  <Image
+                  src={commercialimg.src}
                   alt="Cluttered office space needing junk removal"
-                  width={600}
-                  height={500}
-                  className="rounded-lg object-cover w-full"
-                />
-              </div>
+                  fill
+                  className="object-cover w-full h-full"
+                  />
+                </div>
+                </div>
               <div className="order-1 md:order-2">
-                <h3 className="text-xl font-bold text-green-600 uppercase mb-6">Commercial Junk Removal Services</h3>
+                <h3 className={oswald.className + " text-xl font-bold text-green-600 uppercase mb-6"}>Commercial Junk Removal Services</h3>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <ul className="space-y-3">
-                      <li className="text-gray-700">Office cleanouts</li>
-                      <li className="text-gray-700">Retail space cleanouts</li>
-                      <li className="text-gray-700">Warehouse cleanout services</li>
                       <li className="text-gray-700">Construction debris removal</li>
+                      <li className="text-gray-700">Interior and exterior cleaning</li>
+                      <li className="text-gray-700">Warehouse cleanout services</li>
+                      <li className="text-gray-700">Office cleanouts</li>
                       <li className="text-gray-700">Equipment disposal</li>
                     </ul>
                   </div>
                   <div>
                     <ul className="space-y-3">
-                      <li className="text-gray-700">Restaurant cleanouts</li>
+                      <li className="text-gray-700">Litter pick up for lots and greenbelts</li>
                       <li className="text-gray-700">Foreclosure cleanouts</li>
-                      <li className="text-gray-700">Property management services</li>
+                      <li className="text-gray-700">Retail space cleanout</li>
                       <li className="text-gray-700">Tenant cleanouts</li>
                       <li className="text-gray-700">Industrial waste removal</li>
                     </ul>
@@ -126,7 +136,7 @@ export default function CommercialJunkServicesPage() {
         {/* Same Day Item Pick Up Section */}
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold uppercase mb-6">Same Day Commercial Pick Up</h2>
+            <h2 className={oswald.className + " text-2xl md:text-3xl font-bold uppercase mb-6"}>Same Day Commercial Pick Up</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-gray-700 mb-6">
@@ -139,27 +149,32 @@ export default function CommercialJunkServicesPage() {
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">Office Equipment</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>Desks & chairs</li>
-                      <li>Computers</li>
-                      <li>Printers</li>
                       <li>Filing cabinets</li>
+                      <li>Conference tables</li>
+                      <li>Computers and monitors</li>
+                      <li>Printers, copiers, fax machines</li>
+                      <li>Cubicles and partitions</li>
+                      <li>Office décor and shelving</li>
+                      <li>Paper clutter and outdated files</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900 mb-2">Commercial Items</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>Restaurant equipment</li>
-                      <li>Retail fixtures</li>
-                      <li>Industrial machinery</li>
-                      <li>Warehouse materials</li>
+                      <li>Drywall scraps</li>
+                      <li>Lumber and wood</li>
+                      <li>Insulation</li>
+                      <li>Tile and flooring</li>
+                      <li>Carpet and padding</li>
+                      <li>Roofing materials</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Construction</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">-</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
-                      <li>Drywall debris</li>
-                      <li>Flooring materials</li>
-                      <li>Metal scraps</li>
+                      <li>Scrap metal</li>
+                      <li>Plumbing and electrical waste</li>
+                      <li>Furniture and fixtures</li>
                       <li>Building materials</li>
                     </ul>
                   </div>
@@ -171,7 +186,7 @@ export default function CommercialJunkServicesPage() {
               </div>
               <div>
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={commercialimg2.src}
                   alt="Workers removing commercial equipment"
                   width={600}
                   height={500}
@@ -185,7 +200,7 @@ export default function CommercialJunkServicesPage() {
         {/* Before & After Results Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">Before & After Results</h2>
+            <h2 className={oswald.className + " text-2xl md:text-3xl font-bold text-center mb-4"}>Before & After Results</h2>
             <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12">
               See the dramatic transformations our commercial junk removal services provide to businesses across DFW.
             </p>
@@ -261,7 +276,7 @@ export default function CommercialJunkServicesPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src={commercialreview.src}
                   alt="Satisfied business customer"
                   width={500}
                   height={400}
@@ -271,25 +286,17 @@ export default function CommercialJunkServicesPage() {
               <div>
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={star} className="w-5 h-5 text-green-400 fill-current" />
                   ))}
                 </div>
                 <blockquote className="text-lg italic mb-6">
-                  "Rapid Removal DFW handled our office renovation cleanout perfectly. They were professional,
-                  efficient, and completed the job on schedule. Their team made our commercial project seamless and
-                  stress-free. Highly recommend for any business needs."
+                  "Provided services for my work place. The team was amazing. Extremely professional and efficient. 
+                  Completed the job in a timely manner. Will definitely be using them again!"
                 </blockquote>
                 <div className="flex items-center">
                   <div className="mr-4">
-                    <p className="font-medium">David Chen</p>
-                    <p className="text-sm text-gray-500">Property Manager, Dallas</p>
-                  </div>
-                  <div className="ml-auto">
-                    <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
-                      <text x="0" y="20" className="text-sm font-bold">
-                        ★★★★★
-                      </text>
-                    </svg>
+                    <p className="font-medium">Yvonne Booker</p>
+                    <p className="text-sm text-gray-500">Manager, Dallas</p>
                   </div>
                 </div>
               </div>

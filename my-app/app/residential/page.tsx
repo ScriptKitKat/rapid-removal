@@ -10,6 +10,16 @@ import Navbar from "@/components/navbar"
 import { Oswald, Bebas_Neue } from "next/font/google"
 import ctaimg from "@/assets/ctaimg.jpg"
 import residentialsplash from "@/assets/residentialsplash.jpg"
+import residentialitems from "@/assets/residentialitems.jpg"
+import reviewhappy from "@/assets/reviewhappy.jpg"
+
+import residentialbefore1 from "@/assets/residentialbefore1.jpg"
+import residentialbefore2 from "@/assets/residentialbefore2.jpg"
+import residentialbefore3 from "@/assets/residentialbefore3.jpg"
+import residentialafter1 from "@/assets/residentialafter1.jpg"
+import residentialafter2 from "@/assets/residentialafter2.jpg"
+import residentialafter3 from "@/assets/residentialafter3.jpg"
+
 import garage from "@/assets/garageresidential.jpg"
 
 
@@ -21,9 +31,9 @@ export default function ResidentialJunkServicesPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const beforeAfterImages = [
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
-    { before: "/placeholder.svg?height=400&width=400", after: "/placeholder.svg?height=400&width=400" },
+    { before: residentialbefore1, after: residentialafter1 },
+    { before: residentialbefore2, after: residentialafter2 },
+    { before: residentialbefore3, after: residentialafter3 },
   ]
 
   const nextSlide = () => {
@@ -79,7 +89,7 @@ export default function ResidentialJunkServicesPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={garage.src}
                   alt="Cluttered garage needing junk removal"
                   width={600}
                   height={500}
@@ -152,7 +162,7 @@ export default function ResidentialJunkServicesPage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900 mb-2">Pickup</h4>
+                    <h4 className="font-medium text-gray-900 mb-2">_</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
                       <li>Remodel debris</li>
                       <li>Yard debris</li>
@@ -169,10 +179,10 @@ export default function ResidentialJunkServicesPage() {
               </div>
               <div>
                 <Image
-                  src={garage.src}
-                  alt="Workers carrying junk items"
+                  src={residentialitems.src}
+                  alt="Residential junk items in a truck"
                   width={600}
-                  height={500}
+                  height={100}
                   className="rounded-lg object-cover w-full"
                 />
               </div>
@@ -259,7 +269,7 @@ export default function ResidentialJunkServicesPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src={reviewhappy.src}
                   alt="Satisfied customer"
                   width={500}
                   height={400}
@@ -269,25 +279,19 @@ export default function ResidentialJunkServicesPage() {
               <div>
                 <div className="flex mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={star} className="w-5 h-5 text-green-400 fill-current" />
                   ))}
                 </div>
                 <blockquote className="text-lg italic mb-6">
-                  "I am so pleased with the service I received. Amazing job cleaning out my garage. Suspendisse varius
-                  enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-                  commodo diam libero vitae erat."
+                  "I had an excellent experience with Rapid Removal DFW! They were incredibly responsive via text,
+                  scheduled me quickly, and came out the very next day. They showed up right on time and were 
+                  impressively quick and efficient in removing the trash from my garage. The entire process 
+                  was seamless and hassle-free. I highly recommend their services and will definitely use them again in the future. Thank you for making this so easy!"
                 </blockquote>
                 <div className="flex items-center">
                   <div className="mr-4">
-                    <p className="font-medium">Maria Sanchez</p>
-                    <p className="text-sm text-gray-500">Frisco, Colleyville Client</p>
-                  </div>
-                  <div className="ml-auto">
-                    <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
-                      <text x="0" y="20" className="text-sm font-bold">
-                        ★★★★★
-                      </text>
-                    </svg>
+                    <p className="font-medium">Saajan Bhakta</p>
+                    <p className="text-sm text-gray-500">Dallas, Residential Client</p>
                   </div>
                 </div>
               </div>
