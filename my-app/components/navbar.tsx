@@ -140,13 +140,16 @@ function MobileMenu() {
 
               {/* Call-to-Action Buttons */}
               <div className="p-4 space-y-3 border-t">
-                <Button
-                  className="bg-green-500 hover:bg-green-300 w-full py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700"
-                  onClick={toggleMenu}
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  CALL (214) 225-9545
-                </Button>
+                <Link href="tel:+12142335545">
+                  <Button
+                    className="bg-green-500 hover:bg-green-300 w-full py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700"
+                    onClick={toggleMenu}
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    CALL (214) 233-5545
+                  </Button>
+                </Link>
+                
                 <Button
                   variant="outline"
                   className="w-full rounded-sm border-2 border-black text-black hover:bg-black hover:text-white font-bold py-5 text-lg"
@@ -333,10 +336,13 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button
-            className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700">
-            <p className={bebas.className + " text-[18px]"}>Call (214)-233-5545</p>
-            </Button>
+            <Link href="tel:+12142335545">
+              <Button
+              className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black rounded-sm border-2 hover:border-green-700">
+              <p className={bebas.className + " text-[18px]"}>Call (214) 233-5545</p>
+              </Button>
+            </Link>
+            
             <MobileMenu />
           </div>
         </div>

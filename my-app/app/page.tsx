@@ -401,9 +401,12 @@ export default function Home() {
                   Experience fast, affordable junk removal services tailored to your needs in the DFW area.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href={"tel:+12142335545"}>
                   <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
-                    <p className={bebas.className + " text-[30px]"}>CALL (214) 225-9545</p>
+                    <p className={bebas.className + " text-[30px]"}>CALL (214) 233-5545</p>
                   </Button>
+                  </Link>
+
                   <Link href="/contact#quote" className="w-full">
                     <Button
                       variant="outline"

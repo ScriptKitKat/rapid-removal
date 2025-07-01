@@ -395,13 +395,16 @@ export default function ExteriorCleaningPage() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                className="border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-medium px-8 py-4 rounded-lg text-lg flex items-center justify-center"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                CALL (214) 233-6545
-              </Button>
+              <Link href={"tel:+12142335545"}>
+                <Button
+                  variant="outline"
+                  className="border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-medium px-8 py-4 rounded-lg text-lg flex items-center justify-center"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  CALL (214) 233-5545
+                </Button>
+              </Link>
+             
             </div>
             <p className="text-sm text-gray-500 mt-6">
               Free estimates • Eco-friendly solutions • Same-day consultations available

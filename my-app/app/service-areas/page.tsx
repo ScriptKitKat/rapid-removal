@@ -55,10 +55,12 @@ export default function ServiceAreasPage() {
                     currently serve. Don't see your area? Give us a call – we may still be able to help!
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black border-2 justify-center">
-                        <Phone className="mr-2 h-5 w-5" />
-                        <p className={bebas.className + " text-[20px]"}>CALL (214) 233-6545</p>
-                    </Button>
+                    <Link href={"tel:+12142335545"}>
+                        <Button className="bg-green-500 hover:bg-green-300 py-5 text-white hover:text-black border-2 justify-center">
+                            <Phone className="mr-2 h-5 w-5" />
+                            <p className={bebas.className + " text-[20px]"}>CALL (214) 233-5545</p>
+                        </Button>
+                    </Link>
                     <Button className="bg-gray-900 hover:bg-gray-500 text-white  px-6 py-5 rounded-sm">
                         <p className={bebas.className +  " text-[20px]"}>GET A FREE ESTIMATE</p>
                     </Button>
@@ -130,9 +132,11 @@ export default function ServiceAreasPage() {
                         Experience fast, affordable junk removal services tailored to your needs in the DFW area.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                        <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
-                            <p className={bebas.className + " text-[30px]"}>CALL (214) 225-9545</p>
-                        </Button>
+                        <Link href={"tel:+12142335545"}>
+                            <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
+                                <p className={bebas.className + " text-[30px]"}>CALL (214) 233-5545</p>
+                            </Button>
+                        </Link>
                         <Button
                             variant="outline"
                             className="border-green-500 border-2 text-green-500 px-5 py-6 hover:bg-green-500 hover:text-white"

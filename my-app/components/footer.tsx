@@ -126,10 +126,12 @@ export default function Footer() {
 
             <div className="bg-gray-900 py-4">
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-                <div className="flex items-center mb-4 md:mb-0">
-                <Phone className="h-5 w-5 text-green-500 mr-2" />
-                <span className="text-green-500 font-bold">CALL (214) 225-9545</span>
-                </div>
+                <Link href="tel:+12142335545">
+                    <div className="flex items-center mb-4 md:mb-0">
+                    <Phone className="h-5 w-5 text-green-500 mr-2" />
+                    <span className="text-green-500 font-bold">CALL (214) 233-5545</span>
+                    </div>
+                </Link>
                 <Link href="/contact#quote">
                     <Button className="bg-green-500 hover:bg-green-600 text-white font-medium px-6 py-3 rounded-sm">
                     <p className={bebas.className + " text-[20px]"}>GET A FREE QUOTE TODAY</p>

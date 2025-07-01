@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Phone, Star, ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
@@ -309,9 +310,11 @@ export default function ResidentialJunkServicesPage() {
                   Experience fast, affordable junk removal services tailored to your needs in the DFW area.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
-                    <p className={bebas.className + " text-[30px]"}>CALL (214) 225-9545</p>
-                  </Button>
+                  <Link href={"tel:+12142335545"}>
+                    <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
+                      <p className={bebas.className + " text-[30px]"}>CALL (214) 233-5545</p>
+                    </Button> 
+                  </Link>                  
                   <Button
                     variant="outline"
                     className="border-green-500 border-2 text-green-500 px-5 py-6 hover:bg-green-500 hover:text-white"

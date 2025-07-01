@@ -143,7 +143,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
-                        placeholder="(214) 555-0123"
+                        placeholder="(201) 123-4567"
                         />
                     </div>
 
@@ -200,7 +200,10 @@ export default function ContactPage() {
                         <Phone className="h-6 w-6 text-green-500 mr-4 mt-1 flex-shrink-0" />
                         <div>
                         <h4 className="font-medium text-gray-900">Phone</h4>
-                        <p className="text-gray-600">(214) 233-5545</p>
+                        <Link href={"tel:+12142335545"}>
+                            <p className="text-gray-600">(214) 233-5545</p>
+                        </Link>
+                        
                         <p className="text-sm text-gray-500">Available 7 days a week</p>
                         </div>
                     </div>
@@ -262,10 +265,13 @@ export default function ContactPage() {
                 friendly team is ready to help you get started right away.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
-                        <Phone className="mr-2 h-5 w-5" />
-                        <p className={bebas.className + " text-[30px]"}>CALL NOW: (214) 225-9545</p>
-                    </Button>
+                    <Link href={"tel:+12142335545"}>
+                        <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-5 py-6 border-2 border-green-700 text-lg rounded-sm">
+                            <Phone className="mr-2 h-5 w-5" />
+                            <p className={bebas.className + " text-[30px]"}>CALL NOW: (214) 233-5545</p>
+                        </Button>
+                    </Link>
+                    
                     <Button
                     variant="outline"
                     className="border-green-500 border-2 text-green-500 px-5 py-6 hover:bg-green-500 hover:text-white"
