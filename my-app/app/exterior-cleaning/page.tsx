@@ -10,6 +10,13 @@ import Navbar from "@/components/navbar"
 
 import {Oswald, Bebas_Neue} from "next/font/google"
 
+import exteriorCleaning from "@/assets/exterior-cleaning.webp"
+import exteriorCleaning2 from "@/assets/exterior-cleaning2.jpeg"
+import construction from "@/assets/construction.jpg"
+import residentialImg from "@/assets/residentialimg.jpg"
+import commercialImg from "@/assets/commercialimg.jpg"
+import renovation from "@/assets/renovation.jpeg"
+
 const oswald = Oswald({ subsets: ["latin"], weight: ["400", "700"]})
 const bebas = Bebas_Neue({ subsets: ["latin"], weight: ["400"] })
 
@@ -34,9 +41,9 @@ export default function ExteriorCleaningPage() {
                   </Button>
                 </Link>
               </div>
-              <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center">
+              <div className="bg-gray-200 h-64 md:h-80 rounded-lg flex items-center justify-center overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src={exteriorCleaning.src}
                   alt="Exterior Cleaning Power Washing"
                   width={600}
                   height={400}
@@ -70,9 +77,9 @@ export default function ExteriorCleaningPage() {
                     value.
                   </p>
                 </div>
-                <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
+                <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src={exteriorCleaning2.src}
                     alt="Before and after exterior cleaning"
                     width={500}
                     height={400}
@@ -202,9 +209,9 @@ export default function ExteriorCleaningPage() {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1">
+              <div className="order-2 md:order-1 overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={construction.src}
                   alt="Professional power washing equipment"
                   width={600}
                   height={500}
@@ -266,9 +273,9 @@ export default function ExteriorCleaningPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src={construction.src}
                     alt="Homebuilders"
                     width={300}
                     height={200}
@@ -282,9 +289,9 @@ export default function ExteriorCleaningPage() {
               </div>
 
               <div className="text-center">
-                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src={commercialImg.src}
                     alt="Property Managers"
                     width={300}
                     height={200}
@@ -298,9 +305,9 @@ export default function ExteriorCleaningPage() {
               </div>
 
               <div className="text-center">
-                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src={residentialImg.src}
                     alt="Homeowners"
                     width={300}
                     height={200}
@@ -314,9 +321,9 @@ export default function ExteriorCleaningPage() {
               </div>
 
               <div className="text-center">
-                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center">
+                <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=200&width=300"
+                    src={renovation.src}
                     alt="Business Owners"
                     width={300}
                     height={200}

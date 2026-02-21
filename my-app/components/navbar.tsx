@@ -129,7 +129,7 @@ function MobileMenu() {
                     Contact Us
                   </Link>
                   <Link
-                    href="/testimonial"
+                    href="/testimonials"
                     className="block py-3 text-lg font-medium text-gray-900 hover:text-green-500"
                     onClick={toggleMenu}
                   >

@@ -11,7 +11,7 @@ import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
 import {Oswald, Bebas_Neue} from "next/font/google"
-import dumpstersplash from "@/assets/dumpstersplash.jpg"
+import dumpstersplash from "@/assets/dumpster-hero.jpeg"
 import renovation from "@/assets/renovation.jpeg"
 import estate from "@/assets/residentialsplash.jpg"
 import festival from "@/assets/festival.jpg"
