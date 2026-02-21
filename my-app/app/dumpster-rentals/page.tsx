@@ -52,23 +52,25 @@ const faqData = [
     question: "What size dumpster do I need?",
     answer: (
       <span>
+        <b>15-Yard Dumpster</b>
+        <ul className="list-disc ml-6 mt-2">
+          <li>Great for small cleanouts and bathroom renovations</li>
+          <li>Holds about 75 full-size trash bags</li>
+          <li>Small home projects and garage cleanouts</li>
+        </ul>
         <b>18-Yard Dumpster</b>
         <ul className="list-disc ml-6 mt-2">
           <li>Over 100 full-size trash bags can fit</li>
           <li>Large items like a mattress, couch, dresser, and boxes</li>
           <li>Yard waste or debris</li>
-          <li>Small home cleanouts</li>
-          <li>Light remodeling projects</li>
-          <li>Yard debris or eviction cleanups</li>
+          <li>Medium renovations and kitchen remodels</li>
         </ul>
         <b>25-Yard Dumpster</b>
         <ul className="list-disc ml-6 mt-2">
           <li>150 trash bags worth of junk</li>
           <li>A full home worth of furniture, boxes, and appliances</li>
           <li>Debris from a full-scale remodel project</li>
-          <li>Commercial junk removal</li>
-          <li>Remodeling projects</li>
-          <li>When you&quot;d rather not risk running out of space</li>
+          <li>Commercial junk removal and roofing projects</li>
         </ul>
       </span>
     ),
@@ -132,9 +134,9 @@ export default function DumpsterRentalsPage() {
               Same-day delivery and pickup services throughout the Dallas-Fort Worth area. Choose from multiple sizes to
               fit your project needs.
             </p>
-            <Link href="/contact#quote" className="inline-block mb-6">
+            <Link href="#demo-quote" className="inline-block mb-6">
                   <Button className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-6 border-2 border-green-700 text-md rounded-sm">
-                    <p className={bebas.className + " text-[30px]"}>RESERVE YOUR DUMPSTER TODAY</p>
+                    <p className={bebas.className + " text-[30px]"}>REQUEST A DEMO QUOTE</p>
                   </Button>
             </Link>
           </div>
@@ -150,17 +152,19 @@ export default function DumpsterRentalsPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* 18 Yard Dumpster */}
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* 15 Yard Dumpster */}
               <div className="border border-gray-200 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold mb-4">18 YARD DUMPSTER</h3>
+                <h3 className="text-xl font-bold mb-4">15 YARD DUMPSTER</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">$425</span>
+                  <span className="text-4xl font-bold">$375</span>
                   <p className="text-sm text-gray-500 mt-1">3 DAY RENTAL + 2 Tons Included</p>
                 </div>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-md mb-6">
-                  <p className={bebas.className + " text-[20px]"}>GET STARTED</p>
-                </Button>
+                <Link href="#demo-quote">
+                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-md mb-6">
+                    <p className={bebas.className + " text-[20px]"}>REQUEST A QUOTE</p>
+                  </Button>
+                </Link>
                 <ul className="text-left space-y-2">
                   <li className="flex items-center text-sm">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -205,16 +209,18 @@ export default function DumpsterRentalsPage() {
                 </ul>
               </div>
 
-              {/* 25 Yard Dumpster */}
+              {/* 18 Yard Dumpster */}
               <div className="border border-gray-200 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold mb-4">25 YARD DUMPSTER</h3>
+                <h3 className="text-xl font-bold mb-4">18 YARD DUMPSTER</h3>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">$525</span>
+                  <span className="text-4xl font-bold">$425</span>
                   <p className="text-sm text-gray-500 mt-1">3 DAY RENTAL + 2 Tons Included</p>
                 </div>
-                <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-md mb-6">
-                  <p className={bebas.className + " text-[20px]"}>GET STARTED</p>
-                </Button>
+                <Link href="#demo-quote">
+                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-md mb-6">
+                    <p className={bebas.className + " text-[20px]"}>REQUEST A QUOTE</p>
+                  </Button>
+                </Link>
                 <ul className="text-left space-y-2">
                   <li className="flex items-center text-sm">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -245,6 +251,62 @@ export default function DumpsterRentalsPage() {
                       />
                     </svg>
                     Basement cleanouts
+                  </li>
+                  <li className="flex items-center text-sm">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Yard debris removal
+                  </li>
+                </ul>
+              </div>
+
+              {/* 25 Yard Dumpster */}
+              <div className="border border-gray-200 rounded-lg p-6 text-center">
+                <h3 className="text-xl font-bold mb-4">25 YARD DUMPSTER</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold">$525</span>
+                  <p className="text-sm text-gray-500 mt-1">3 DAY RENTAL + 2 Tons Included</p>
+                </div>
+                <Link href="#demo-quote">
+                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 rounded-md mb-6">
+                    <p className={bebas.className + " text-[20px]"}>REQUEST A QUOTE</p>
+                  </Button>
+                </Link>
+                <ul className="text-left space-y-2">
+                  <li className="flex items-center text-sm">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Large renovations
+                  </li>
+                  <li className="flex items-center text-sm">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Full home cleanouts
+                  </li>
+                  <li className="flex items-center text-sm">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    Construction debris
                   </li>
                   <li className="flex items-center text-sm">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -340,13 +402,13 @@ export default function DumpsterRentalsPage() {
           </div>
         </section>
 
-        {/* Reserve Your Dumpster Form Section */}
-        <section className="py-16 bg-white">
+        {/* Request a Demo Quote Form Section */}
+        <section id="demo-quote" className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className={oswald.className + " text-3xl md:text-4xl font-bold mb-4"}>Reserve Your Dumpster</h2>
+              <h2 className={oswald.className + " text-3xl md:text-4xl font-bold mb-4"}>Request a Demo Quote</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Fill out the form below and we'll get back to you with your quote and availability.
+                Fill out the form below and we'll send you a personalized demo quote for your project.
               </p>
             </div>
 
@@ -425,10 +487,10 @@ export default function DumpsterRentalsPage() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
                   required
                 >
-                  <option value="">Select size</option>
-                  <option value="10-yard">10 Yard Dumpster - $299</option>
-                  <option value="20-yard">20 Yard Dumpster - $399</option>
-                  <option value="30-yard">30 Yard Dumpster - $499</option>
+                  <option value="">Select a dumpster size</option>
+                  <option value="15-yard">15 Yard Dumpster</option>
+                  <option value="18-yard">18 Yard Dumpster</option>
+                  <option value="25-yard">25 Yard Dumpster</option>
                   <option value="not-sure">Not sure - Help me choose</option>
                 </select>
               </div>
@@ -468,7 +530,7 @@ export default function DumpsterRentalsPage() {
                 <Button 
                   type="submit"
                   className="bg-green-400 hover:bg-green-600 text-black hover:text-white font-medium px-6 py-6 border-2 border-green-700 text-md rounded-sm">
-                  <p className={bebas.className + " text-[30px]"}>GET YOUR QUOTE & RESERVE YOUR DUMPSTER TODAY</p>
+                  <p className={bebas.className + " text-[30px]"}>REQUEST YOUR DEMO QUOTE</p>
                 </Button>
               </div>
             </form>
