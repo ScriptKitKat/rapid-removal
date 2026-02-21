@@ -330,7 +330,7 @@ export default function Navbar() {
             <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-green-500">
               Contact Us
             </Link>
-            <Link href="/testimonial" className="text-sm font-medium text-gray-700 hover:text-green-500">
+            <Link href="/testimonials" className="text-sm font-medium text-gray-700 hover:text-green-500">
               Testimonials
             </Link>
           </nav>
