@@ -165,11 +165,6 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold mb-4 underline">LIGHT DEMOLITIONS</h3>
                   </Link>
                 </div>
-                <div>
-                    <Link href="/exterior-cleaning" className="block mb-6 hover:text-green-500 transition-colors duration-200">
-                  <h3 className="text-xl font-bold mb-4 underline">EXTERIOR CLEANING</h3>
-                    </Link>
-                </div>
               </div>
             </div>
           </div>

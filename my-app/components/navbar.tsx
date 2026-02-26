@@ -102,13 +102,6 @@ function MobileMenu() {
                         >
                           Light Demolitions
                         </Link>
-                        <Link
-                          href="/exterior-cleaning"
-                          className="block py-2 text-gray-700 hover:text-green-500"
-                          onClick={toggleMenu}
-                        >
-                          Exterior Cleaning
-                        </Link>
                       </div>
                     )}
                   </div>
@@ -286,27 +279,6 @@ export default function Navbar() {
                       <div className="ml-3">
                         <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
                           Light Demolitions
-                        </p>
-                      </div>
-                    </Link>
-
-                    <Link
-                      href="/exterior-cleaning"
-                      className="flex items-center p-3 rounded-lg hover:bg-green-50 transition-colors group/item"
-                    >
-                      <div className="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover/item:bg-green-200 transition-colors">
-                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3zm6 13l.75 2.25L21 18l-2.25.75L18 21l-.75-2.25L15 18l2.25-.75L18 16zm-12 0l.75 2.25L9 18l-2.25.75L6 21l-.75-2.25L3 18l2.25-.75L6 16z"
-                          />
-                        </svg>
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-900 group-hover/item:text-green-600">
-                          Exterior Cleaning
                         </p>
                       </div>
                     </Link>

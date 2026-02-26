@@ -14,7 +14,7 @@ import locations from "@/assets/locations.jpg"
 import ctaimg from "@/assets/ctaimg.jpg"
 import demolition from "@/assets/demolition.jpg"
 import dumpster from "@/assets/dumpster.jpg"
-import exterior from "@/assets/exterior.webp"
+import renovation from "@/assets/renovation.jpeg"
 
 import {Oswald, Bebas_Neue} from "next/font/google"
 
@@ -262,23 +262,6 @@ export default function Home() {
                   <p className="text-gray-600 mb-4">Choose from various sizes to meet your needs.</p>
                 </div>
               </Link>
-              <Link
-                href="/exterior-cleaning"
-                className="border rounded-lg overflow-hidden block focus:outline-none focus:ring-2 focus:ring-green-500 transition-shadow hover:shadow-lg cursor-pointer"
-                tabIndex={0}
-              >
-                <div className="border rounded-lg overflow-hidden">
-                  <div className="h-48 bg-gray-200 relative">
-                    <div className="flex items-center justify-center h-full">
-                      <Image src={exterior.src} alt="Dumpster Rental" fill className="object-cover" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-2xl mb-2">Expert Exterior Cleaning for Homebuilders</h3>
-                    <p className="text-gray-600 mb-4">We provide thorough debris removal and power washing.</p>
-                  </div>
-                </div>
-              </Link>
 
               <Link
                 href="/light-demolitions"
@@ -297,7 +280,23 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              
+              <Link
+                href="/exterior-cleaning"
+                className="border rounded-lg overflow-hidden block focus:outline-none focus:ring-2 focus:ring-green-500 transition-shadow hover:shadow-lg cursor-pointer"
+                tabIndex={0}
+              >
+                <div className="border rounded-lg overflow-hidden">
+                  <div className="h-48 bg-gray-200 relative">
+                    <div className="flex items-center justify-center h-full">
+                      <Image src={renovation.src} alt="Dumpster Rental" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-2xl mb-2">Excellent Junk Removal Services</h3>
+                    <p className="text-gray-600 mb-4">We provide thorough debris removal and disposal services for residential and commercial properties.</p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>

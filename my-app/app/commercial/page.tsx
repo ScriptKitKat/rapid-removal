@@ -106,7 +106,6 @@ export default function CommercialJunkServicesPage() {
                   <div>
                     <ul className="space-y-3">
                       <li className="text-gray-700">Construction debris removal</li>
-                      <li className="text-gray-700">Interior and exterior cleaning</li>
                       <li className="text-gray-700">Warehouse cleanout services</li>
                       <li className="text-gray-700">Office cleanouts</li>
                       <li className="text-gray-700">Equipment disposal</li>
